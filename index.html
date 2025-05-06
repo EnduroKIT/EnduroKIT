@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Прокат мотоциклов</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="telegram.js" defer></script>
+</head>
+<body>
+
+<header>
+  <h1>Прокат мотоциклов в Вашем городе</h1>
+  <p>Быстро, удобно и доступно</p>
+</header>
+
+<nav>
+  <a href="#services">Мотоциклы</a>
+  <a href="#prices">Цены</a>
+  <a href="#booking">Бронирование</a>
+  <a href="#contacts">Контакты</a>
+</nav>
+
+<div class="container">
+
+  <section id="services">
+    <h2>Наши мотоциклы</h2>
+
+    <div class="moto-card">
+      <h3>Yamaha MT-07</h3>
+      <p>Лёгкий и манёвренный мотоцикл, идеально подходит для города.</p>
+      <p><strong>Цена:</strong> от 3000₽/день</p>
+    </div>
+
+    <div class="moto-card">
+      <h3>BMW R1200GS</h3>
+      <p>Отличный выбор для путешествий и дальних поездок.</p>
+      <p><strong>Цена:</strong> от 4500₽/день</p>
+    </div>
+
+    <div class="moto-card">
+      <h3>Harley-Davidson Sportster</h3>
+      <p>Стиль и комфорт для ценителей классики.</p>
+      <p><strong>Цена:</strong> от 5000₽/день</p>
+    </div>
+  </section>
+
+  <section id="prices">
+    <h2>Условия и цены</h2>
+    <ul>
+      <li>Аренда от 1 дня</li>
+      <li>Залог от 10 000₽</li>
+      <li>Необходимы права категории A</li>
+      <li>Шлем и экипировка — по запросу</li>
+    </ul>
+  </section>
+
+  <section id="booking">
+    <h2>Форма бронирования</h2>
+    <form onsubmit="sendTelegram(event)">
+      <label for="name">Ваше имя:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Телефон:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="bike">Выберите мотоцикл:</label>
+      <select id="bike" name="bike">
+        <option>Yamaha MT-07</option>
+        <option>BMW R1200GS</option>
+        <option>Harley-Davidson Sportster</option>
+      </select>
+
+      <label for="date">Дата аренды:</label>
+      <input type="date" id="date" name="date" required>
+
+      <button type="submit">Отправить заявку</button>
+    </form>
+  </section>
+
+  <section id="contacts">
+    <h2>Контакты</h2>
+    <p><strong>Адрес:</strong> г. Ваш город, ул. Примерная, 1</p>
+    <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+    <p><strong>Email:</strong> info@motoprokat.ru</p>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2025 Прокат мотоциклов. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
